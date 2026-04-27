@@ -1,83 +1,114 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HRP · The Human Return Protocol</title>
-  <meta name="description" content="HRP 2026 execution website: AiQ, Neural Cuff, Dream Design, AstroTimeCandle, QDR Music, pricing, timeline, risks." />
-  <link rel="stylesheet" href="styles.css?v=1yi" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRP · 427Hz</title>
+
+<link rel="stylesheet" href="./styles.css">
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial;
+  background:#000;
+  color:#fff;
+}
+
+.section{
+  padding:80px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+.music-item{
+  margin-bottom:32px;
+  padding:20px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.music-item:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+.music-item h3{
+  font-size:24px;
+  margin:0 0 8px 0;
+}
+
+.music-item p{
+  opacity:0.7;
+  margin:0;
+}
+</style>
 </head>
+
 <body>
-  <canvas id="field"></canvas>
-  <div class="noise"></div>
 
-  <header class="topbar">
-    <a class="brand" href="#hero">HRP · 427Hz</a>
-    <nav id="nav"></nav>
-    <button id="modeBtn" class="pill">神模式</button>
-  </header>
+<!-- LANDING -->
+<div class="section">
+  <h1>Enter your perception.</h1>
+  <p>HRP · The Human Return Protocol · 2026</p>
+</div>
 
-  <main>
-    <section id="hero" class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">THE HUMAN RETURN PROTOCOL · 2026 EXECUTION</p>
-        <h1>Enter your perception.</h1>
-        <p class="lead">从 AiQ 点火到感质垄断：一个入口，五条产品线，八个月执行节奏，年度目标 ≥¥1亿 CNY · Expansion Mode。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#aiq">Enter AiQ</a>
-          <a class="button ghost" href="#timeline">View Timeline</a>
-        </div>
-      </div>
-      <div class="orb" aria-hidden="true">
-        <span>427</span>
-      </div>
-    </section>
+<!-- QDR MUSIC -->
+<div class="section">
+  <h2>六阶段神经干预序列</h2>
 
-    <section class="section stack-intro">
-      <p class="eyebrow">QUALIA SOVEREIGNTY STACK</p>
-      <h2>一个入口，五个世界。</h2>
-      <p>AiQ 是入口；Neural Cuff 是身体层；梦境设计是顶端稀缺服务；AstroTimeCandle 是物理仪式锚点；QDR 音乐是可复制版权资产。它们不是并列商品，而是进入同一个感知宇宙的不同深度。</p>
-      <div id="stackCards" class="card-grid five"></div>
-    </section>
+  <!-- 1 -->
+  <div class="music-item">
+    <h3>Breakbeats</h3>
+    <p>不确定性承受 / 神经入口</p>
+  </div>
 
-    <section id="aiq" class="section node-section"></section>
-    <section id="bci" class="section node-section"></section>
-    <section id="dream" class="section node-section"></section>
-    <section id="candle" class="section node-section"></section>
-    <section id="qdr" class="section node-section"></section>
+  <!-- 2 -->
+  <div class="music-item">
+    <h3>Hyperpop</h3>
+    <p>认知动量 / Peak Traversal</p>
+  </div>
 
-    <section id="pricing" class="section pricing-section">
-      <p class="eyebrow">06 · PRICING SYSTEM</p>
-      <h2>完整定价体系</h2>
-      <p class="lead small">信仰定价，不是成本定价。每一个价格都是一个宣言。</p>
-      <div class="pricing-wrap">
-        <div class="table-card"><table id="pricingTable"></table></div>
-        <div id="revenueCards" class="revenue-cards"></div>
-      </div>
-    </section>
+  <!-- 3 -->
+  <div class="music-item">
+    <h3>Synthpop</h3>
+    <p>意义回归 / First Breath</p>
+  </div>
 
-    <section id="timeline" class="section timeline-section">
-      <p class="eyebrow">07 · EXECUTION RHYTHM</p>
-      <h2>2026年5月—12月时间计划节点</h2>
-      <p class="lead small">每个月有且只有一个最优先动作，其余都是支撑。</p>
-      <div id="timelineRail" class="timeline"></div>
-    </section>
+  <!-- 4 -->
+  <div class="music-item">
+    <h3>Drift Phonk</h3>
+    <p>具身化 / 身体驱动</p>
+  </div>
 
-    <section id="risks" class="section risks-section">
-      <p class="eyebrow">08 · RISK MATRIX</p>
-      <h2>8个威胁与反制</h2>
-      <p class="lead small">每一个风险都有一个比它更强的答案。</p>
-      <div id="riskGrid" class="card-grid"></div>
-    </section>
+  <!-- 5 -->
+  <div class="music-item">
+    <h3>Darkwave</h3>
+    <p>情绪共调 / Shadow Integration / 14°C</p>
+  </div>
 
-    <section class="section manifesto">
-      <p class="eyebrow">EXPANSION LOCK</p>
-      <h2>We do not chase one hundred million. We structure it.</h2>
-      <p>HRP 的一亿路径不是靠单品爆卖，而是 AiQ 拉人、Neural Cuff 提高客单、Dream Design 分层变现、IP/品牌共创成为主现金流引擎、Candle 作为可传播入口共同推进。</p>
-    </section>
-  </main>
+  <!-- 6 -->
+  <div class="music-item">
+    <h3>Ambient Techno</h3>
+    <p>心流维持 / 空间稳定</p>
+  </div>
 
-  <script src="nodes.js?v=1yi"></script>
-  <script src="script.js?v=1yi"></script>
+</div>
+
+<!-- FOOT -->
+<div class="section">
+  <p style="opacity:0.4;">427Hz · Qualia Sovereignty Stack</p>
+</div>
+
 </body>
 </html>
