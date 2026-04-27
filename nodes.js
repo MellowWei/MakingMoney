@@ -1,46 +1,262 @@
 window.HRP_NODES = {
+  stack: [
+    {
+      badge: "01 · Entrance",
+      title: "AiQ 愛",
+      text: "感质分发协议。不是工具，不是 App，是今年所有流量、用户、订阅和身份转化的主入口。"
+    },
+    {
+      badge: "02 · Body",
+      title: "Neural Cuff",
+      text: "节律主权硬件。用高客单预售与机构 POC 把感知系统从屏幕推进到身体。"
+    },
+    {
+      badge: "03 · Crown",
+      title: "Dream Design",
+      text: "高价感质定制服务。顶级版保持神圣，初探版与企业版释放规模。"
+    },
+    {
+      badge: "04 · Ritual",
+      title: "AstroTimeCandle",
+      text: "非线性时间物理锚点。承担小红书视觉传播、企业礼盒和联名产品入口。"
+    },
+    {
+      badge: "05 · IP Engine",
+      title: "QDR Music / HRP Protocol",
+      text: "音乐版权、品牌共创、演讲、授权的主现金引擎。真正决定 2 亿能否成立。"
+    }
+  ],
   sprint: [
-    { title: "Day 1–3 · 打样", desc: "完成第一条强叙事短视频、企业合作入口、等待名单入口。核心不是解释产品，而是让人第一次感觉：这里有一个新世界入口。", points: ["你本人出镜：427Hz / 感质主权 / AI为什么不该只管理效率", "网站首页新增三个入口：AiQ等待名单、企业合作、媒体合作", "准备10句可剪短视频的金句"] },
-    { title: "Day 4–10 · 放大", desc: "每天1条内容，中英双语多平台同步。让算法识别你不是普通创作者，而是一个稳定输出的新概念源。", points: ["每天：理念/过程/证据三类内容轮换", "触达50个品牌/机构/实验室/播客/媒体", "把QDR音乐片段和页面视觉变成传播素材"] },
-    { title: "Day 11–20 · 转化", desc: "用私享会、线上会、合作邀约把注意力变成现金流线索。", points: ["开2–3场线上私享会：30–100人", "拿到≥5个企业意向", "敲定≥2个付费试点：¥50万–¥100万/单"] }
+    {
+      day: "DAY 1–3",
+      title: "打样：一个强叙事视频 + 一个企业入口页",
+      points: [
+        "拍你本人出镜的核心视频：427Hz / 感质主权 / 为什么现在需要 HRP。",
+        "网站首页明确三个入口：AiQ 等待名单、企业合作、媒体合作。",
+        "准备一页 PDF：企业版 HRP / BCI / QDR 解决方案。"
+      ]
+    },
+    {
+      day: "DAY 4–10",
+      title: "放大：连续内容 + 目标触达",
+      points: [
+        "每天发布 1 条短内容：理念、过程、证据轮换。",
+        "同步触达 50 个品牌 / 机构 / 音频 / wellness / 创意空间。",
+        "每条内容都导向同一个合作入口，不分散。"
+      ]
+    },
+    {
+      day: "DAY 11–20",
+      title: "转化：私享会 + 大单线索",
+      points: [
+        "举办 2–3 场线上私享会，30–100人即可，不追求大而空。",
+        "目标拿到 5 个企业意向与 2 个付费试点。",
+        "每个试点报价 ¥50–300万，不以低价换信任。"
+      ]
+    }
   ],
-  script: [
-    { time: "0–3s", text: "镜头看向你：‘所有AI都在教你提高效率，但我不想再把人类当成任务机器。’" },
-    { time: "3–8s", text: "切到网站/声音/手腕视觉：‘我做的是 Human Return Protocol，一个把注意力、身体节律和音乐重新还给人的系统。’" },
-    { time: "8–15s", text: "展示六阶段音乐协议：Breakbeats、Hyperpop、Synthpop、Drift Phonk、Darkwave、Ambient Techno。‘这不是歌单，这是神经进入路径。’" },
-    { time: "15–23s", text: "展示AiQ/Neural Cuff/Dream Design：‘软件是入口，硬件是身体，梦境设计是最高访问层。’" },
-    { time: "23–30s", text: "正面收束：‘如果你是品牌、实验室、创作者或机构，现在可以进入427Hz。我们不是卖产品，我们定义下一代感知经济。’" }
-  ],
-  businessBullets: [
-    "企业/机构方案：¥100万–¥300万 / 单，包含协议、设备、音乐干预、3个月支持。",
-    "IP / 品牌共创：¥80万–¥200万 / 单，适合音频、科技、时尚、空间、wellness品牌。",
-    "QDR音乐授权：¥8万/年起，可用于空间体验、课程、App、品牌活动。",
-    "HRP演讲/私享会：¥30万/场起，作为品牌传播和B端转化入口。"
+  money: [
+    {
+      value: "¥8,000万",
+      title: "IP / 品牌共创",
+      text: "主引擎。品牌授权、空间体验、音乐联名、427Hz 叙事背书，目标 40 单高价合作。"
+    },
+    {
+      value: "¥5,000万",
+      title: "企业 / 机构合作",
+      text: "BCI + QDR + 3个月支持 + 数据报告。¥100–300万/单，目标 20 单。"
+    },
+    {
+      value: "¥3,000万",
+      title: "Neural Cuff 硬件",
+      text: "3000套 × ¥9800。用预售、身份感、出镜内容和机构背书驱动。"
+    },
+    {
+      value: "¥2,000万",
+      title: "AiQ 订阅",
+      text: "4–5万订阅规模。免费层负责扩散，付费层负责稳定现金流。"
+    },
+    {
+      value: "¥1,500万",
+      title: "Dream Design 矩阵",
+      text: "¥1万初探 / ¥5万进阶 / ¥20万顶级 / ¥80万企业版，保留神性同时释放规模。"
+    },
+    {
+      value: "¥500万+",
+      title: "Candle / 礼盒 / 联名",
+      text: "承担视觉扩散与礼品现金流，不是主引擎，但能制造可传播的物理入口。"
+    }
   ],
   music: [
-    { name:"Breakbeats", role:"不确定性承受 / 神经入口 / 反解离锚定", color:"rgba(255,179,92,.55)" },
-    { name:"Hyperpop", role:"Peak Traversal / 强度到顶 / 能量释放", color:"rgba(255,88,220,.55)" },
-    { name:"Synthpop", role:"First Breath / 意义回归 / 安全结构", color:"rgba(113,190,255,.55)" },
-    { name:"Drift Phonk", role:"具身化 / 身体驱动 / 触觉节拍", color:"rgba(130,255,150,.55)" },
-    { name:"Darkwave", role:"Shadow Integration / 情绪共调 / 14°C", color:"rgba(109,90,210,.65)" },
-    { name:"Ambient Techno", role:"空间稳定 / 心流维持 / 环境调节", color:"rgba(105,255,225,.48)" }
-  ],
-  revenue: [
-    { label:"IP / 品牌共创", value:"¥8,000万", desc:"40单 × ¥80万–¥200万。成为2亿主引擎。" },
-    { label:"企业/机构合作", value:"¥5,000万", desc:"BCI + QDR + AiQ 方案，20单高价试点。" },
-    { label:"Neural Cuff", value:"¥3,000万", desc:"3000套 × ¥9,800，预售与出圈内容驱动。" },
-    { label:"AiQ订阅", value:"¥2,000万", desc:"4–5万人订阅规模，免费层转化。" },
-    { label:"Dream Design", value:"¥1,500万", desc:"顶级、进阶、初探、企业版四层矩阵。" },
-    { label:"Candle / IP礼盒", value:"¥500万+", desc:"视觉传播、企业礼品、联名款补充现金流。" }
+    {
+      title: "Breakbeats",
+      text: "不确定性承受 / 神经入口 / 反解离锚定",
+      colorA: "rgba(255, 181, 96, .40)",
+      colorB: "rgba(255, 122, 70, .24)",
+      colorC: "rgba(255, 216, 154, .16)",
+      shadow: "rgba(255, 181, 96, .25)"
+    },
+    {
+      title: "Hyperpop",
+      text: "认知动量 / Peak Traversal / 到达强度顶点",
+      colorA: "rgba(255, 88, 214, .40)",
+      colorB: "rgba(139, 92, 255, .32)",
+      colorC: "rgba(255, 227, 255, .16)",
+      shadow: "rgba(255, 88, 214, .25)"
+    },
+    {
+      title: "Synthpop",
+      text: "意义回归 / First Breath / 第一次安全呼吸",
+      colorA: "rgba(118, 199, 255, .38)",
+      colorB: "rgba(93, 255, 219, .22)",
+      colorC: "rgba(255, 229, 178, .14)",
+      shadow: "rgba(118, 199, 255, .25)"
+    },
+    {
+      title: "Drift Phonk",
+      text: "具身化 / 身体驱动 / 呼吸与触觉节拍",
+      colorA: "rgba(114, 255, 138, .36)",
+      colorB: "rgba(91, 255, 220, .22)",
+      colorC: "rgba(255, 180, 92, .12)",
+      shadow: "rgba(114, 255, 138, .22)"
+    },
+    {
+      title: "Darkwave",
+      text: "情绪共调 / Shadow Integration / 14°C",
+      colorA: "rgba(97, 84, 190, .46)",
+      colorB: "rgba(35, 35, 72, .44)",
+      colorC: "rgba(164, 204, 255, .12)",
+      shadow: "rgba(97, 84, 190, .28)"
+    },
+    {
+      title: "Ambient Techno",
+      text: "心流维持 / 空间稳定 / Flow Infrastructure",
+      colorA: "rgba(103, 255, 228, .34)",
+      colorB: "rgba(96, 145, 255, .22)",
+      colorC: "rgba(255, 255, 255, .10)",
+      shadow: "rgba(103, 255, 228, .25)"
+    }
   ],
   timeline: [
-    { month:"5月", money:"≈¥300万", title:"20天出圈 + AiQ点火", actions:["发布第一条出圈视频并连续20天输出", "AiQ等待名单与企业合作入口上线", "完成100个品牌/机构名单并开始触达", "创始会员闪购与第一场私享会"] },
-    { month:"6月", money:"≈¥800万", title:"企业线索转试点", actions:["Neural Cuff预售页上线", "完成2–3个付费POC签约", "QDR音乐授权拿下第一批客户", "发布第一批用户/测试反馈"] },
-    { month:"7月", money:"≈¥1,500万", title:"硬件交付 + B端扩张", actions:["首批Neural Cuff交付", "机构合作累计5单", "Dream Design申请开放", "HRP第一次公开演讲或大型线上发布"] },
-    { month:"8月", money:"≈¥2,500万", title:"Dream Design矩阵启动", actions:["¥1万/¥5万/¥20万/¥80万四层产品上线", "AiQ企业版上线", "品牌共创报价开始密集推进", "完成第二波出圈内容"] },
-    { month:"9月", money:"≈¥3,000万", title:"IP共创与礼盒", actions:["签下5–8个IP/品牌合作", "中秋/秋分Candle企业礼盒", "AiQ订阅冲到1万人以上", "Dream Design产出传播案例"] },
-    { month:"10月", money:"≈¥4,000万", title:"万人节点 + 量产谈判", actions:["AiQ万人节点公开庆祝", "Neural Cuff量产1000–3000套谈判", "企业合作累计10–15单", "HRP第二/第三场演讲"] },
-    { month:"11月", money:"≈¥5,500万", title:"硬件量产 + 年末大单", actions:["Neural Cuff量产交付", "年末企业礼盒冲量", "品牌共创集中签约", "QDR授权扩到30–50家"] },
-    { month:"12月", money:"≈¥8,400万", title:"年度收割 + 2027锁定", actions:["完成全年大单结算", "AiQ冲4–5万订阅", "发布2027 HRP Expansion Manifesto", "锁定下一年度企业与IP预付款"] }
+    {
+      month: "5月",
+      money: "≈¥300万",
+      title: "出圈点火 · AiQ 等待名单 · 企业入口上线",
+      points: [
+        "发布第一个世界观级视频：427Hz / 感质主权 / HRP 诞生。",
+        "首页升级为企业合作入口 + AiQ 等待名单 + 媒体合作入口。",
+        "完成商标、版权、QDR 曲库注册启动。",
+        "触达 100 个品牌 / 机构 / 创意空间。"
+      ]
+    },
+    {
+      month: "6月",
+      money: "≈¥800万",
+      title: "私享会 · Neural Cuff 预售 · 第一批大单线索",
+      points: [
+        "Neural Cuff 预售页上线，定金 ¥1,980。",
+        "举办 2–3 场线上私享会，集中转化企业线索。",
+        "拿到 2 个 ¥50–100万试点意向。",
+        "AiQ 免费层上线，开始扩大用户池。"
+      ]
+    },
+    {
+      month: "7月",
+      money: "≈¥1,500万",
+      title: "第一批 POC 签约 · 硬件首批交付",
+      points: [
+        "签下 2–3 家机构 POC。",
+        "交付 Neural Cuff 首批 50 套，产出真实使用素材。",
+        "开放 Dream Design 申请，设置四层价格矩阵。",
+        "完成第一批 QDR 音乐授权报价。"
+      ]
+    },
+    {
+      month: "8月",
+      money: "≈¥2,500万",
+      title: "Dream Design 启动 · 企业版 HRP 上线",
+      points: [
+        "启动首批 Dream Design 客户。",
+        "上线 HRP 企业版方案：¥100–300万/单。",
+        "签下第一批 QDR 音乐授权。",
+        "完成第一场公开演讲或行业分享。"
+      ]
+    },
+    {
+      month: "9月",
+      money: "≈¥3,000万",
+      title: "品牌共创 · 中秋礼盒 · 第二增长峰值",
+      points: [
+        "推进 5–8 个品牌共创报价。",
+        "AstroCandle 秋分 / 中秋企业礼盒上线。",
+        "AiQ 订阅冲 5000–10000 人。",
+        "Dream Design 产出第一批传播案例。"
+      ]
+    },
+    {
+      month: "10月",
+      money: "≈¥4,000万",
+      title: "AiQ 万人节点 · IP 授权集中签约",
+      points: [
+        "公开 AiQ 万人节点，制造第二次出圈。",
+        "Neural Cuff 量产谈判，目标 1000 套。",
+        "签约 5–10 个 IP / 音乐 / 品牌授权。",
+        "企业 POC 累计推进到 8–12 家。"
+      ]
+    },
+    {
+      month: "11月",
+      money: "≈¥5,000万",
+      title: "硬件量产 · 年末企业礼盒 · B端冲刺",
+      points: [
+        "Neural Cuff 量产首批交付。",
+        "年末企业礼盒与联名产品冲量。",
+        "AiQ 企业版批量签约。",
+        "Dream Design 企业版集中成交。"
+      ]
+    },
+    {
+      month: "12月",
+      money: "≈¥7,000万",
+      title: "年度收割 · 2027 Expansion Manifesto",
+      points: [
+        "集中结算 IP、品牌共创、企业方案和硬件订单。",
+        "AiQ 冲 4–5 万订阅用户。",
+        "发布 2027 HRP Expansion Manifesto。",
+        "锁定下一年度更高价合作入口。"
+      ]
+    }
+  ],
+  risks: [
+    {
+      level: "HIGH",
+      title: "20天出圈预期过高，导致错误投入",
+      answer: "按“出圈冲刺”执行，不把它当保证。每天看数据：观看、私信、表单、会议、付款，避免用幻想替代转化。"
+    },
+    {
+      level: "HIGH",
+      title: "单人带宽崩溃",
+      answer: "60天内必须找运营 / 商务 / 物流伙伴。Mellow 只做内容、定调、关键露面。"
+    },
+    {
+      level: "HIGH",
+      title: "高价 B 端成交周期长",
+      answer: "同时推进 50–100 个目标对象，不等单一客户。准备标准 POC 方案书和合同模板。"
+    },
+    {
+      level: "MED",
+      title: "产品体验跟不上叙事",
+      answer: "先做 30 人内测，宁可延迟 7 天，不带伤上线。第一波用户必须变成证据。"
+    },
+    {
+      level: "MED",
+      title: "硬件交付风险",
+      answer: "所有预售写预计区间，留 20% 时间缓冲。延迟时主动通知并补偿 AiQ 订阅。"
+    },
+    {
+      level: "MED",
+      title: "IP 被模仿",
+      answer: "提前注册商标版权，但真正护城河是 Mellow 本人的感知密度、音乐、语言和世界观。"
+    }
   ]
 };
