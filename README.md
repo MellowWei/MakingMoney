@@ -1,42 +1,51 @@
-# HRP · The Human Return Protocol Website
+# HRP / MakingMoney · ≥¥1亿 Expansion Mode
 
-This is a static website structure that integrates the full HRP Execution Playbook into a WonderBits-style interactive entry site.
+这是 HRP 商业网站的 1亿目标重构版。
 
-## Files
+## 核心更新
 
-- `index.html` — main website shell and section anchors.
-- `styles.css` — full visual system, responsive layout, dark/light toggle, cards, pricing table, timeline, risk matrix.
-- `script.js` — renders all sections dynamically from `nodes.js`, creates navigation, active section highlighting, and particle background.
-- `nodes.js` — the full content/data layer: AiQ, BCI / Neural Cuff, Dream Design, AstroTimeCandle, QDR Music, pricing, timeline, and risks.
+- AiQ 从 3万人目标升级为 5万人目标，作为规模入口。
+- Neural Cuff 从 2,200套/4家POC 升级为 3,000套/10家POC。
+- 梦境设计从单一稀缺服务升级为四层矩阵：顶级版、进阶版、初探版、企业版。
+- IP / 品牌共创从附属收入升级为主现金流引擎。
+- AstroTimeCandle 从小产品升级为礼盒、联名、入口IP。
+- 年度收入模型重构为约 ¥1.15亿。
 
-## How to use
+## 文件
 
-1. Put all four files in the same folder.
-2. Open `index.html` locally in a browser, or upload all files to a GitHub Pages repository.
-3. Edit `nodes.js` whenever you want to change copy, pricing, timeline, or risk data.
+```txt
+index.html
+styles.css
+script.js
+nodes.js
+README.md
+```
 
-## Deployment on GitHub Pages
+## GitHub Pages 上传要求
 
-1. Create or open your repository.
-2. Upload `index.html`, `styles.css`, `script.js`, `nodes.js`, and `README.md` to the repository root.
-3. Go to Settings → Pages.
-4. Set Source to `Deploy from a branch`.
-5. Choose `main` branch and `/root`.
-6. Save and wait for the Pages URL to update.
+必须放在仓库根目录，文件名保持一致：
 
-## Structure Logic
+```txt
+index.html
+styles.css
+script.js
+nodes.js
+README.md
+```
 
-The site is organized as a single perception operating environment:
+如果你已有 `style.css` 或 `node.js`，请改名为：
 
-- AiQ = Core Engine / 感质分发协议
-- BCI / Neural Cuff = Hardware Layer / 节律主权硬件
-- Dream Design = High Access Service / 终极感质定制
-- AstroTimeCandle = Ritual Layer / 非线性时间度量衡
-- QDR Music = Copyright Asset / 感质干预音乐库
-- Pricing = Revenue System / 信仰定价
-- Timeline = Execution Rhythm / 2026年5月—12月
-- Risks = Counterforce Matrix / 8个威胁与反制
+```txt
+styles.css
+nodes.js
+```
 
-## Design Principle
+## 本次更新重点
 
-This is not a normal product website. It is an entry interface into the HRP universe: visual attraction, conceptual hierarchy, revenue clarity, and execution rhythm in one page.
+主要更新：
+
+- `nodes.js`：所有收入目标、时间线、定价体系、产品矩阵更新。
+- `index.html`：标题、缓存版本号、Expansion Lock 文案更新。
+- `README.md`：说明 1亿 Expansion Mode。
+
+`styles.css` 和 `script.js` 保持兼容，可直接继续用。
