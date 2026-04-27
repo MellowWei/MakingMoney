@@ -2,440 +2,203 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HRP · Making Money · 427Hz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HRP · 427Hz · Making Money</title>
 
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial;
   background:#050508;
   color:#f4f1ff;
   overflow-x:hidden;
 }
+
 body::before{
   content:"";
   position:fixed;
   inset:0;
   background:
-    radial-gradient(circle at 20% 20%, var(--glow,#6fffe9) 0, transparent 26%),
-    radial-gradient(circle at 80% 10%, rgba(180,120,255,.35), transparent 28%),
-    radial-gradient(circle at 50% 90%, rgba(255,180,100,.25), transparent 32%),
+    radial-gradient(circle at 20% 20%, var(--glow,#6fffe9), transparent 30%),
+    radial-gradient(circle at 80% 20%, #8b5cff55, transparent 30%),
     #050508;
-  opacity:.38;
+  opacity:.4;
   z-index:-2;
   transition:1s;
 }
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size:80px 80px;
-  opacity:.15;
-  z-index:-1;
-}
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:20;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 28px;
-  backdrop-filter:blur(18px);
-  background:rgba(5,5,8,.55);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-nav a{
-  color:#f4f1ff;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
-  opacity:.75;
-}
-nav a:hover{opacity:1}
-.brand{font-weight:800;letter-spacing:.08em}
+
 section{
-  min-height:100vh;
-  padding:120px 7vw 80px;
+  padding:120px 7vw;
 }
-.hero{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.kicker{
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  opacity:.65;
-  font-size:13px;
-}
+
 h1{
-  font-size:clamp(52px,9vw,130px);
-  line-height:.92;
-  margin:22px 0;
+  font-size:clamp(72px,10vw,160px);
+  line-height:.85;
 }
+
 h2{
-  font-size:clamp(36px,5vw,72px);
-  margin:0 0 28px;
+  font-size:48px;
 }
-h3{font-size:26px;margin:0 0 10px}
+
 p{
-  font-size:20px;
-  line-height:1.75;
-  color:rgba(244,241,255,.72);
+  color:rgba(255,255,255,.7);
 }
-.big{
-  font-size:clamp(24px,3vw,38px);
-  max-width:1100px;
-}
-.cta-row{
+
+.hero{
+  min-height:100vh;
   display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-top:34px;
+  align-items:center;
+  position:relative;
 }
-.btn{
-  border:1px solid rgba(255,255,255,.18);
-  color:#fff;
-  text-decoration:none;
-  padding:14px 22px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  transition:.25s;
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
 }
-.btn:hover{
-  transform:translateY(-2px);
-  background:rgba(255,255,255,.16);
+
+.hero h1 span{
+  background:linear-gradient(90deg,#fff,#6fffe9,#b8a0ff);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:shine 5s linear infinite;
+  background-size:300%;
 }
+
+@keyframes shine{
+  0%{background-position:0%}
+  100%{background-position:300%}
+}
+
+.hero-console{
+  border:1px solid rgba(255,255,255,.15);
+  padding:30px;
+  border-radius:30px;
+  backdrop-filter:blur(20px);
+}
+
+.console-line{
+  font-family:monospace;
+  margin:10px 0;
+  opacity:.7;
+}
+
+.pulse-number{
+  font-size:60px;
+  color:#6fffe9;
+  margin-bottom:20px;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
+  gap:20px;
 }
+
 .card{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:28px;
-  padding:28px;
-  background:rgba(255,255,255,.07);
-  backdrop-filter:blur(18px);
-  box-shadow:0 20px 80px rgba(0,0,0,.28);
-}
-.card strong{
-  display:block;
-  font-size:34px;
-  color:#fff;
-  margin-bottom:8px;
-}
-.music-card{
+  padding:24px;
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
   cursor:pointer;
-  min-height:180px;
+  transition:.3s;
 }
-.music-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(255,255,255,.35);
+
+.card:hover{
+  transform:translateY(-5px);
 }
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:rgba(255,255,255,.1);
-  font-size:13px;
-  margin-bottom:16px;
-  opacity:.8;
-}
+
 .timeline{
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:20px;
 }
+
 .month{
-  display:grid;
-  grid-template-columns:120px 1fr 140px;
-  gap:26px;
-  align-items:start;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
 }
-.month-name{
-  font-size:40px;
-  font-weight:900;
-  color:#9fffe8;
-}
-.money{
-  font-size:24px;
-  font-weight:900;
-  color:#ffe19a;
-  text-align:right;
-}
-ul{
-  margin:14px 0 0;
-  padding-left:22px;
-}
-li{
-  margin:8px 0;
-  color:rgba(244,241,255,.72);
-  line-height:1.6;
-}
+
 .revenue{
-  font-size:clamp(40px,7vw,96px);
-  font-weight:900;
-  color:#fff;
-}
-.footer{
-  min-height:auto;
-  padding-bottom:60px;
-  opacity:.55;
-}
-@media(max-width:760px){
-  nav{position:static;flex-direction:column;gap:10px}
-  nav a{margin:0 8px}
-  section{padding:80px 22px}
-  .month{grid-template-columns:1fr}
-  .money{text-align:left}
+  font-size:72px;
+  font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="brand">HRP · 427Hz</div>
-  <div>
-    <a href="#stack">Stack</a>
-    <a href="#music">Music</a>
-    <a href="#money">1亿模型</a>
-    <a href="#timeline">时间计划</a>
-  </div>
-</nav>
-
+<!-- HERO -->
 <section class="hero">
-  <div class="kicker">The Human Return Protocol · 2026 Execution</div>
-  <h1>Enter your perception.</h1>
-  <p class="big">从 AiQ 点火到感质主权商业闭环：一个入口，五条产品线，六阶段音乐协议，八个月执行节奏，年度目标 ¥1亿 CNY。</p>
-  <div class="cta-row">
-    <a class="btn" href="#music">进入 QDR Music</a>
-    <a class="btn" href="#timeline">查看月度行动</a>
+  <div class="hero-grid">
+    <div>
+      <h1>Enter your <span>perception.</span></h1>
+      <p>从 AiQ 点火到感质主权商业闭环 · 年度目标 ¥1亿</p>
+    </div>
+
+    <div class="hero-console">
+      <div class="pulse-number">427Hz</div>
+      <div class="console-line">AiQ initialized</div>
+      <div class="console-line">Neural Cuff ready</div>
+      <div class="console-line">Dream Design unlocked</div>
+      <div class="console-line">QDR protocol loaded</div>
+      <div class="console-line">Target: ¥100,000,000</div>
+    </div>
   </div>
 </section>
 
-<section id="stack">
-  <div class="kicker">Qualia Sovereignty Stack</div>
-  <h2>一个入口，五个世界。</h2>
-  <div class="grid">
-    <div class="card"><span class="badge">01 Core</span><h3>AiQ 愛</h3><p>感质分发协议。不是工具，不是 App，是整个 HRP 宇宙的入口。</p></div>
-    <div class="card"><span class="badge">02 Body</span><h3>Neural Cuff</h3><p>节律主权硬件。身体不是传感器，身体是权威。</p></div>
-    <div class="card"><span class="badge">03 Crown</span><h3>梦境设计</h3><p>顶端稀缺服务。不是课程，不是咨询，是感质体验定制。</p></div>
-    <div class="card"><span class="badge">04 Ritual</span><h3>AstroTimeCandle</h3><p>非线性时间度量衡。不是蜡烛，是时间的物理锚点。</p></div>
-    <div class="card"><span class="badge">05 IP</span><h3>QDR Music / Protocol</h3><p>可授权、可复制、可扩张的版权与频率资产。</p></div>
-  </div>
-</section>
-
+<!-- MUSIC -->
 <section id="music">
-  <div class="kicker">QDR Music Engine</div>
   <h2>六阶段神经干预序列</h2>
-  <p>点击每个类型，页面会切换到对应感知状态。</p>
 
   <div class="grid">
-    <div class="card music-card" data-color="rgba(255,180,90,.55)">
-      <h3>Breakbeats</h3>
-      <p>不确定性承受 / 神经入口 / 反解离锚定</p>
-    </div>
-    <div class="card music-card" data-color="rgba(255,80,220,.55)">
-      <h3>Hyperpop</h3>
-      <p>认知动量 / Peak Traversal / 到达强度顶点</p>
-    </div>
-    <div class="card music-card" data-color="rgba(120,200,255,.55)">
-      <h3>Synthpop</h3>
-      <p>意义回归 / First Breath / 第一次安全呼吸</p>
-    </div>
-    <div class="card music-card" data-color="rgba(150,255,160,.55)">
-      <h3>Drift Phonk</h3>
-      <p>具身化 / 身体驱动 / 呼吸与触觉节拍</p>
-    </div>
-    <div class="card music-card" data-color="rgba(90,80,160,.65)">
-      <h3>Darkwave</h3>
-      <p>情绪共调 / Shadow Integration / 14°C</p>
-    </div>
-    <div class="card music-card" data-color="rgba(120,255,230,.45)">
-      <h3>Ambient Techno</h3>
-      <p>心流维持 / 空间稳定 / Flow Infrastructure</p>
-    </div>
+    <div class="card" data-color="#ffb35c">Breakbeats<br>神经入口</div>
+    <div class="card" data-color="#ff6fff">Hyperpop<br>认知爆发</div>
+    <div class="card" data-color="#6fbfff">Synthpop<br>意义回归</div>
+    <div class="card" data-color="#7fff8a">Drift Phonk<br>身体驱动</div>
+    <div class="card" data-color="#7c6cff">Darkwave<br>情绪整合</div>
+    <div class="card" data-color="#6fffe9">Ambient Techno<br>心流维持</div>
   </div>
 </section>
 
-<section id="money">
-  <div class="kicker">Expansion Mode</div>
-  <h2>1亿目标重构版</h2>
-  <p class="big">要达成 ¥1亿，主引擎必须从“卖产品”升级为“IP / B端 / 高价服务 / 订阅规模”的复合扩张。</p>
+<!-- MONEY -->
+<section>
+  <h2>1亿结构</h2>
 
   <div class="grid">
-    <div class="card"><strong>¥3,000万</strong><h3>AiQ 订阅</h3><p>5万订阅用户，免费层转化，感质日志驱动增长。</p></div>
-    <div class="card"><strong>¥2,500万</strong><h3>Neural Cuff</h3><p>C端预售 + B端 POC，硬件成为身份入口。</p></div>
-    <div class="card"><strong>¥1,500万</strong><h3>Dream Design 矩阵</h3><p>顶级版、进阶版、初探版、企业版四层释放规模。</p></div>
-    <div class="card"><strong>¥3,500万</strong><h3>IP / 品牌共创</h3><p>品牌授权、演讲、QDR音乐授权、联名产品成为主引擎。</p></div>
-    <div class="card"><strong>¥1,000万</strong><h3>Candle / 礼盒</h3><p>小红书爆款、企业礼盒、联名款，承担视觉传播与现金流。</p></div>
+    <div class="card">AiQ ¥3000万</div>
+    <div class="card">BCI ¥2500万</div>
+    <div class="card">Dream ¥1500万</div>
+    <div class="card">IP ¥3500万</div>
+    <div class="card">Candle ¥1000万</div>
   </div>
 
-  <p class="revenue">≈ ¥1.15亿</p>
+  <div class="revenue">≈ ¥1亿+</div>
 </section>
 
-<section id="timeline">
-  <div class="kicker">2026 Monthly Execution</div>
-  <h2>5月—12月详细行动计划</h2>
+<!-- TIMELINE -->
+<section>
+  <h2>月度行动</h2>
 
   <div class="timeline">
-
-    <div class="card month">
-      <div class="month-name">5月</div>
-      <div>
-        <h3>AiQ 点火 · 创始会员闪购</h3>
-        <p>核心任务：建立存在感与第一笔现金流。</p>
-        <ul>
-          <li>上线 AiQ MVP 与等待名单。</li>
-          <li>发布“427Hz 等待名单开放”单一入口内容。</li>
-          <li>48小时创始会员闪购：前50席 ¥1,980。</li>
-          <li>提交 HRP / 427Hz / AiQ / Neural Cuff 商标与版权注册。</li>
-          <li>发布第一篇感质日志，建立创始叙事。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥50万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">6月</div>
-      <div>
-        <h3>Neural Cuff 预售 · 第一批机构关系</h3>
-        <p>核心任务：从软件入口推进到身体硬件。</p>
-        <ul>
-          <li>上线 Neural Cuff 预售页，定金 ¥1,980。</li>
-          <li>制作开箱视觉、佩戴场景、假数据节律 UI。</li>
-          <li>联系 UPenn / wellness / 创意机构，准备 POC 方案书。</li>
-          <li>AstroCandle 夏至限定发布。</li>
-          <li>AiQ 免费层上线，扩大转化池。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥120万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">7月</div>
-      <div>
-        <h3>首批硬件交付 · 第一家 POC</h3>
-        <p>核心任务：把系统从“概念”变成“被购买的现实”。</p>
-        <ul>
-          <li>交付 Neural Cuff 首批50套。</li>
-          <li>签下第一家机构 POC，目标 ¥50万。</li>
-          <li>开放梦境设计申请表：只问“你最想被听见的感质是什么？”</li>
-          <li>AiQ 用户目标 2,000人。</li>
-          <li>启动第一场 HRP 小型私享会。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥280万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">8月</div>
-      <div>
-        <h3>梦境设计启动 · 企业版上线</h3>
-        <p>核心任务：建立高价服务与企业入口。</p>
-        <ul>
-          <li>梦境设计首批客户启动。</li>
-          <li>上线 Dream Design 四层矩阵：¥1万 / ¥5万 / ¥20万 / ¥80万。</li>
-          <li>AiQ 企业版上线，定价 ¥3万/席/年。</li>
-          <li>签下第一家 QDR 音乐授权机构。</li>
-          <li>完成第一场 HRP 演讲或公开分享。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥500万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">9月</div>
-      <div>
-        <h3>第二家 POC · 中秋企业礼盒</h3>
-        <p>核心任务：让 B 端和礼盒市场开始贡献现金流。</p>
-        <ul>
-          <li>签约第二家机构 POC。</li>
-          <li>AiQ 订阅目标 5,000人。</li>
-          <li>推出 AstroCandle 秋分限定与中秋企业礼盒。</li>
-          <li>产出梦境设计第一批案例语录。</li>
-          <li>开始接触品牌共创合作方。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥800万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">10月</div>
-      <div>
-        <h3>AiQ 万人节点 · IP 授权加速</h3>
-        <p>核心任务：公开里程碑，制造第二增长峰值。</p>
-        <ul>
-          <li>AiQ 10,000人节点发布庆祝内容。</li>
-          <li>Neural Cuff 量产谈判启动，目标1000套。</li>
-          <li>签下第三家 POC 或企业健康项目。</li>
-          <li>推进 3–5 个品牌共创报价。</li>
-          <li>HRP 第二场演讲，导流至 AiQ 与企业入口。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥1,500万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">11月</div>
-      <div>
-        <h3>硬件量产 · 年末礼盒冲量</h3>
-        <p>核心任务：用硬件、礼盒、企业版拉高月收入。</p>
-        <ul>
-          <li>Neural Cuff 量产首批交付。</li>
-          <li>AstroCandle 冬至限定与年末企业礼盒执行。</li>
-          <li>AiQ 企业版批量签约冲刺。</li>
-          <li>Dream Design 扩展到进阶版与企业版。</li>
-          <li>至少敲定 5 个 QDR 音乐授权。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥2,800万</div>
-    </div>
-
-    <div class="card month">
-      <div class="month-name">12月</div>
-      <div>
-        <h3>年底总冲刺 · 2027叙事锁定</h3>
-        <p>核心任务：集中结算、集中发布、集中锁定下一年。</p>
-        <ul>
-          <li>AiQ 目标 50,000人。</li>
-          <li>Neural Cuff Q4 累计冲量。</li>
-          <li>完成 IP 授权、品牌共创、演讲年末结算。</li>
-          <li>梦境设计企业版完成 3–10 次。</li>
-          <li>发布 2027 HRP Expansion Manifesto。</li>
-        </ul>
-      </div>
-      <div class="money">≈¥4,000万</div>
-    </div>
-
+    <div class="month">5月：AiQ上线 + 闪购</div>
+    <div class="month">6月：硬件预售 + 建立B端</div>
+    <div class="month">7月：交付 + 第一POC</div>
+    <div class="month">8月：Dream启动 + 企业版</div>
+    <div class="month">9月：礼盒 + 第二POC</div>
+    <div class="month">10月：1万用户 + IP扩张</div>
+    <div class="month">11月：量产 + 企业冲量</div>
+    <div class="month">12月：最终收割</div>
   </div>
-</section>
-
-<section class="footer">
-  <p>HRP · The Human Return Protocol · 427Hz · AiQ 愛 · Neural Cuff · QDR Music · AstroTimeCandle · Dream Design</p>
 </section>
 
 <script>
-const cards = document.querySelectorAll(".music-card");
-
-cards.forEach(card=>{
+document.querySelectorAll(".card").forEach(card=>{
   card.addEventListener("click",()=>{
     const color = card.dataset.color;
-    document.body.style.setProperty("--glow", color);
-
-    cards.forEach(c=>c.style.borderColor="rgba(255,255,255,.12)");
-    card.style.borderColor="rgba(255,255,255,.65)";
+    document.body.style.setProperty("--glow",color);
   });
 });
 </script>
