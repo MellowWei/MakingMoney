@@ -1,21 +1,25 @@
-# HRP · Making Money · 2亿执行协议
+# HRP MakingMoney · Dreamy Particle Interface
 
 ## Files
-- `index.html` — page structure
-- `styles.css` — visual system
-- `nodes.js` — all editable content/data nodes
-- `script.js` — rendering + interaction + starfield
+- `index.html` — main website structure
+- `styles.css` — dreamy particle / glassmorphism visual system
+- `nodes.js` — all content data
+- `script.js` — rendering logic + particle canvas + music state interaction
 
-## Deploy
-Upload all four files to the root of your GitHub Pages repo.
+## Deploy to GitHub Pages
+Upload these four files to the root of your `MakingMoney` repository:
 
-Required filenames:
-- `index.html`
-- `styles.css`
-- `nodes.js`
-- `script.js`
+```txt
+index.html
+styles.css
+nodes.js
+script.js
+```
 
-Do not rename `nodes.js` to `node.js` or `styles.css` to `style.css` unless you also update the references in `index.html`.
+Then open:
 
-## Edit content
-Most copy, revenue targets, music phases, video script, and monthly plan are in `nodes.js`.
+```txt
+https://mellowwei.github.io/MakingMoney/
+```
+
+Important: file names must match exactly.
